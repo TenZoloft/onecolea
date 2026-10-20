@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kept, by One Colea</title>
+  <meta name="description" content="Kept is a private phone list of subscriptions and bills. It shows the monthly cost. Pro shows the year.">
+  <link rel="canonical" href="https://onecolea.com/">
+  <meta property="og:title" content="Kept, by One Colea">
+  <meta property="og:description" content="A private list of subscriptions and bills. The monthly total is free. Pro shows the year.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://onecolea.com/">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231c1915'/%3E%3Cpath fill='%23e4c27a' d='M10 6h12v18l-6-4-6 4z'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,620&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #f3eee4;
+      --ink: #1c1915;
+      --soft: #5e584f;
+      --brass: #8a5a1e;
+      --line: #ddd4c4;
+      --card: #fffbf5;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Outfit, sans-serif;
+      font-size: 1.0625rem;
+      line-height: 1.6;
+    }
+    a { color: var(--brass); }
+    main {
+      width: min(40rem, calc(100% - 3rem));
+      margin: 0 auto;
+      padding: 3.5rem 0 5rem;
+    }
+    .eyebrow {
+      margin: 0;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--brass);
+    }
+    h1 {
+      margin: 0.35rem 0 0;
+      font-family: Fraunces, serif;
+      font-weight: 500;
+      font-size: clamp(4.5rem, 14vw, 7.5rem);
+      line-height: 0.86;
+      letter-spacing: -0.04em;
+    }
+    .rule {
+      width: 3rem;
+      height: 2px;
+      margin: 1.5rem 0 1.25rem;
+      background: var(--brass);
+      border: 0;
+    }
+    .lede {
+      margin: 0;
+      max-width: 34rem;
+      font-size: 1.25rem;
+      line-height: 1.45;
+    }
+    h2 {
+      margin: 3.25rem 0 0.75rem;
+      font-family: Fraunces, serif;
+      font-weight: 500;
+      font-size: 2rem;
+      letter-spacing: -0.03em;
+    }
+    p { margin: 0.75rem 0 0; }
+    .quiet { color: var(--soft); }
+    ol {
+      margin: 1rem 0 0;
+      padding: 0;
+      list-style: none;
+      counter-reset: step;
+    }
+    ol li {
+      counter-increment: step;
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--line);
+    }
+    ol li strong {
+      display: block;
+      font-family: Fraunces, serif;
+      font-size: 1.25rem;
+      font-weight: 500;
+    }
+    ol li strong::before {
+      content: counter(step) "  ";
+      color: var(--brass);
+    }
+    .plans {
+      display: grid;
+      gap: 0.75rem;
+      margin-top: 1.25rem;
+    }
+    .plan {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 1.1rem;
+      padding: 1rem 1.1rem 1.05rem;
+    }
+    .plan.featured { border-color: var(--brass); background: #f0e2c8; }
+    .plan h3 {
+      margin: 0;
+      font-family: Fraunces, serif;
+      font-size: 1.45rem;
+      font-weight: 500;
+    }
+    .plan p { margin-top: 0.25rem; color: var(--soft); }
+    .mark {
+      display: block;
+      margin-bottom: 0.35rem;
+      font-family: Outfit, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      color: var(--brass);
+    }
+    footer {
+      margin-top: 3.5rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--line);
+      color: var(--soft);
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">One Colea</p>
+    <h1>Kept</h1>
+    <hr class="rule">
+    <p class="lede">The yearly cost of the subscriptions and bills you keep paying.</p>
+    <p class="quiet">Kept is a list that lives on your phone. You type each charge once. The app turns it into a monthly total. Pro adds the full year, a reminder three days before the renewal, and a spreadsheet when you want one.</p>
+
+    <h2>What you get</h2>
+    <ol>
+      <li>
+        <strong>Add a charge</strong>
+        Name, amount, how often it bills, and the next date.
+      </li>
+      <li>
+        <strong>See the month</strong>
+        Three charges are free, with the monthly total on the first screen.
+      </li>
+      <li>
+        <strong>Keep the year</strong>
+        Pro removes the cap, shows the yearly number, reminds you, and exports a CSV.
+      </li>
+    </ol>
+
+    <h2>Pro</h2>
+    <div class="plans">
+      <article class="plan featured">
+        <span class="mark">Best value</span>
+        <h3>Yearly</h3>
+        <p>One payment for the year. This is the plan the app highlights.</p>
+      </article>
+      <article class="plan">
+        <h3>Monthly</h3>
+        <p>Renews each month until you cancel it in Google Play.</p>
+      </article>
+      <article class="plan">
+        <h3>Lifetime</h3>
+        <p>Pay once. If a subscription is still active, cancel it in Google Play so you are not billed twice.</p>
+      </article>
+    </div>
+    <p class="quiet">The app is free to install. Prices for Pro are shown by Google Play and can differ by country. There are no ads inside Kept.</p>
+
+    <h2 id="privacy">Privacy</h2>
+    <p class="quiet">Effective October 20, 2026. Kept is published by One Colea for Android.</p>
+    <p>The charges you enter stay on that phone: the name, amount, currency, how often it bills, and the next charge date. Kept also stores, on the device, whether Pro is unlocked and the identifiers it needs to schedule reminders.</p>
+    <p>A purchase or a restore goes through Google Play. Google processes the payment. Kept does not receive your card number, and One Colea does not run an account system or a server for your list.</p>
+    <p>If you allow notifications, the phone shows a reminder about three days before a renewal. If you export, Kept writes a CSV and hands it to the share sheet. It goes only to the app you choose.</p>
+    <p>Kept does not include advertising or analytics. It is not directed at children. Uninstalling the app removes its data from the phone, except for a copy your own Android backup may still hold.</p>
+    <p>Questions about this policy go to the developer email address on the Kept listing in Google Play.</p>
+
+    <footer>
+      <p>One Colea publishes Kept. The list never leaves the phone unless you export it.</p>
+    </footer>
+  </main>
+</body>
+</html>
